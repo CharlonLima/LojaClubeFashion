@@ -4,11 +4,15 @@
     border: 0;
     box-sizing: border-box;
 }
+:root{
+    --background-color-animation: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    font-size: 16px;
+}
 body{
     height: 100vh;
     width: 100vw;
     animation: gradient 10s ease alternate infinite;
-    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab) no-repeat;
+    background: var(--background-color-animation);
     background-size: 300% 300%;
 }
 @keyframes gradient {
@@ -24,7 +28,6 @@ header, main, footer{
 }
 header{
     height: 10%;
-    background: linear-gradient(#EC407A, #42A5F5);
 }
 h1, ul{
     width: 50%;
@@ -41,8 +44,9 @@ li{
     border-radius: 20px;
 }
 li:hover{
-    background: linear-gradient(#F06292, #81D4FA, #F06292);
-    transition: 2s;
+    animation: gradient 2s ease-in alternate infinite;
+    background: var(--background-color-animation);
+    background-size: 300% 300%;
 }
 section{
     flex-wrap: wrap;
@@ -56,30 +60,31 @@ section{
     margin-bottom: 30px;
 }
 .conteinerProdutoFem:hover{
-    background: linear-gradient(#FCE4EC, #F06292);
+    animation: gradient 2s ease-in alternate infinite;
+    background: var(--background-color-animation);
+    background-size: 300% 300%;
 }
 .conteinerProdutoMas:hover{
-    background: linear-gradient(#E1F5FE, #81D4FA);
+    animation: gradient 2s ease-in alternate infinite;
+    background: var(--background-color-animation);
+    background-size: 300% 300%;
 }
 .preco{
     width: 62px;
     height: 62px;
     border-radius: 100%;
-    background: linear-gradient(#F06292, #81D4FA);
     display: flex;
     position: absolute;
     right: 0;
     bottom: 0;
+    animation: gradient 10s ease-in alternate infinite;
+    background: var(--background-color-animation);
+    background-size: 300% 300%;
     justify-content: center;
     align-items: center;
     color: white;
 }
-footer{
-    height: 10%;
-    background: linear-gradient(#42A5F5, #EC407A);
-    position: fixed;
-    bottom: 0;
-}figure, img{
+figure, img{
     width: 100%;
     height: 100%;
 }
@@ -95,6 +100,7 @@ a{
 }
 .material-icons{
     color: red !important;
+    font-size: clamp(0.4rem, 1vw, 1.5rem);
 }
 .centralizar{
     display: flex;
