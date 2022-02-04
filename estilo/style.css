@@ -44,20 +44,43 @@ li{
     border-radius: 20px;
 }
 li:hover{
-    animation: gradient 2s ease-in alternate infinite;
+    animation: gradient 2s ease-in-out alternate infinite;
     background: var(--background-color-animation);
     background-size: 300% 300%;
 }
+li:hover span{
+    animation: girarIcone 1s ease infinite;
+}
+@keyframes girarIcone {
+    from{
+        transform: rotate(0deg);
+    }
+    to{
+        transform: rotate(360deg);
+    }
+}
+
 section{
     flex-wrap: wrap;
     margin-top: 15px;
+}
+.inputIncrementoEdecremento{
+    width: 20px;
+    height: 20px;
+    border-radius: 10px;
+    background-color: purple;
+    color: white;
+}
+.qtdPreco{
+    background-color: var(--background-color-animation);
+    color: #fff;
 }
 .conteinerProdutoFem, .conteinerProdutoMas{
     width: 160px;
     height: 160px;
     border-radius: 100%;
     position: relative;
-    margin-bottom: 30px;
+    margin-bottom: 80px;
 }
 .conteinerProdutoFem:hover{
     animation: gradient 2s ease-in alternate infinite;
